@@ -90,6 +90,7 @@ const ultimateSub = {
     'Lifetime' : '$8000'
 }
 
+//deluxe subscription
 const deluxeSub = {
     'One-time' : '$75',
     'Weekly' : '$150',
@@ -98,6 +99,7 @@ const deluxeSub = {
     'Lifetime' : '$2000'
 }
 
+//basic subscription
 const basicSub = {
     'One-time' : '$25',
     'Weekly' : '$50',
@@ -109,7 +111,7 @@ const basicSub = {
 //PACKAGE OBJECTS
 const ultimatePackage = {
     'name' : 'Ultimate',
-    'subcription price' : ultimateSub,
+    'price' : ultimateSub,
     'services' : ultimateServices
 }
 
