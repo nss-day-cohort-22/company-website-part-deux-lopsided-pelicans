@@ -10,10 +10,12 @@ for (let i = 0; i < storedPackages.length; i++) {
       
     let currentPackage = storedPackages[i];
 
-    packagesElement.innerHTML +=
-        `<div class='subSection'>
-            <h2>${currentPackage.name}</h2>
-        </div>`
+    let sectionDom = ""
+
+    sectionDom +=
+        `<section class='subSection'>
+            <h2>${currentPackage.name}</h2>`
+       
     
 
     // Nested for loop to go deeper into the database to find objects nested  within the array nested in the previous loop's currentPackage
@@ -22,7 +24,7 @@ for (let i = 0; i < storedPackages.length; i++) {
     
         let currentService = currentPackage.services[j];
 
-        packagesElement.innerHTML +=
+        sectionDom +=
             `<button onclick='toastIt()' class='serviceButton'>
                 <h3>${currentService.name}</h3>
                 <ul>
@@ -31,10 +33,16 @@ for (let i = 0; i < storedPackages.length; i++) {
                 </ul>
             </button>
             `
-        console.log(packagesElement);
-    }
+            console.log(packagesElement);
+        }
 
+        sectionDom += `</section>`;
+//instead of using innerHTML before this, I used a variable 'sectionDom' to store each html text as a string which continually concatonates itself through the loop until it has stored all the text that needs to go in the html and injects it below.
+packagesElement.innerHTML += domstring;
 }
+
+
+
 
 //TOASTER onCLick function for each button 
 //(??SHOULD JESS AND I USE THE EXACT SAME CODE AND PUT IT IN A SEPERATE TOASTER.JS FILE???)
