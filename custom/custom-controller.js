@@ -19,7 +19,7 @@ for (let i = 0; i < storedPackages.length; i++) {
         let currentService = currentPackage.services[j];
 
         packagesElement.innerHTML +=
-            `<button>
+            `<button onclick='toastIt()'>
                 <h3>${currentService.name}</h3>
                 <ul>
                     <li>${currentService.price}</li>
@@ -29,4 +29,17 @@ for (let i = 0; i < storedPackages.length; i++) {
             `
     }
 
+}
+
+//TOASTER onCLick function for each button 
+//(??SHOULD JESS AND I USE THE EXACT SAME CODE AND PUT IT IN A SEPERATE TOASTER.JS FILE???)
+function toastIt() {
+    // Get the snackbar DIV
+    let toast = document.getElementById("toaster")
+
+    // Add the "show" class to DIV
+    toast.className = "show";
+
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
 }
