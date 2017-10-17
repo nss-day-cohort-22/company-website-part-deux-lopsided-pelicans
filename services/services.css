@@ -1,21 +1,12 @@
-.title {
-    text-align: center;
-}
-
-
-.serviceButton  {
-    display: inline-block;
-    width: 28%;
-    height: 30%;
-}
 
 
 
 
 
-/******************** TOASTER *********************************************************************/
+
+
 /* The snackbar - position it at the bottom and in the middle of the screen */
-#toaster {
+#snackbar {
     visibility: hidden; /* Hidden by default. Visible on click */
     min-width: 250px; /* Set a default minimum width */
     margin-left: -125px; /* Divide value of min-width by 2 */
@@ -31,7 +22,7 @@
 }
 
 /* Show the snackbar when clicking on a button (class added with JavaScript) */
-#toaster.show {
+#snackbar.show {
     visibility: visible; /* Show the snackbar */
 
 /* Add animation: Take 0.5 seconds to fade in and out the snackbar. 

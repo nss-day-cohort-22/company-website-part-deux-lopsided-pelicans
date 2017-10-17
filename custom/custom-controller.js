@@ -11,15 +11,19 @@ for (let i = 0; i < storedPackages.length; i++) {
     let currentPackage = storedPackages[i];
 
     packagesElement.innerHTML +=
-        `<h2>${currentPackage.name}</h2>`
+        `<div class='subSection'>
+            <h2>${currentPackage.name}</h2>
+        </div>`
+    
 
     // Nested for loop to go deeper into the database to find objects nested  within the array nested in the previous loop's currentPackage
-    for (let j = 0; j < currentPackage.services.length; j++)  {
+    // NOTE: currentPackage.services.length was not used because i only want to display the first 3 of all the services.
+    for (let j = 0; j < 3; j++)  {
     
         let currentService = currentPackage.services[j];
 
         packagesElement.innerHTML +=
-            `<button onclick='toastIt()'>
+            `<button onclick='toastIt()' class='serviceButton'>
                 <h3>${currentService.name}</h3>
                 <ul>
                     <li>${currentService.price}</li>
@@ -27,6 +31,7 @@ for (let i = 0; i < storedPackages.length; i++) {
                 </ul>
             </button>
             `
+        console.log(packagesElement);
     }
 
 }
