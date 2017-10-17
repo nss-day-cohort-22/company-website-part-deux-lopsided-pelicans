@@ -5,6 +5,14 @@
     </head>
 
     <body>
+        
+        <header>
+            <ul id="nav">    
+            <!-- navbar here -->
+            </ul>            
+        </header>
+    
+        
         <h1 class=title>Build Your Own</h1>
 
         <section id='mainSection'>
@@ -13,20 +21,21 @@
 
         <div id="list"></div>
 
-        <input type="button" id="previous" onclick="previousPage()" value="previous" />
-        <input type="button" id="1" onclick="changePage(1)" value="1" />
-        <input type="button" id="2" onclick="changePage(2)" value="2" />
-        <input type="button" id="3" onclick="changePage(3)" value="3" />
-        <input type="button" id="4" onclick="changePage(4)" value="4" />
-        <input type="button" id="5" onclick="changePage(5)" value="5" />
-        <input type="button" id="next" onclick="nextPage()" value="next" />
-
+        <div id="pageBar">
+            <input type="button" id="previous" class="pageButton" onclick="previousPage()" value="<" />
+            <input type="button" id="first" class="pageButton" onclick="changePage(1)" value="1" />
+            <input type="button" id="second" class="pageButton" onclick="changePage(2)" value="2" />
+            <input type="button" id="third" class="pageButton" onclick="changePage(3)" value="3" />
+            <input type="button" id="fourth" class="pageButton" onclick="changePage(4)" value="4" />
+            <input type="button" id="fifth" class="pageButton" onclick="changePage(5)" value="5" />
+            <input type="button" id="next" class="pageButton" onclick="nextPage()" value=">" />
+        </div>
      
             
 
         <!-- <script src=custom-controller.js></script> -->
         <script src=custom-factory.js></script>
-        <script src=paginate.js></script>
+        <script src=custom-controller.js></script>
 
 
         <div id='toaster'>Service Added to Your "Real" Shopping Cart</div>
