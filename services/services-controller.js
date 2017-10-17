@@ -37,8 +37,9 @@ for (let i = 0; i < packagesString.length; i += 1) { //for loop duh
         </select>
         <br>
         <button type="button" onclick="clicker()" class="button">Purchase Now</button>
+        
 </article>
-
+    <div><img class="vroom" src="${packages[i].vroom}"></div>
 </section>
 
 `
@@ -58,3 +59,15 @@ function clicker() {
     setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
 }
 
+// vroom function?
+var vroom = function($vroom,speed){
+    vroomWidth = $vroom.width();
+    
+    $vroom.animate({
+        "left": "50%"
+    }, speed);
+};
+
+$(function(){
+    vroom($("#vroom"), 5000);
+});
