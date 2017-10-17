@@ -1,19 +1,18 @@
-/* .packages-main {
-    display: flex;
 
-} */
 body {
-    background-color: red
+    background-color: red;
+    font-family: 'Play', sans-serif;
 }
 .header{
-    font-size: 40px;
+    position: center;
+
 }
 
 .packages-main {
-    display: flex;
+    /* display: flex; */
 }
 .datPic {
-    object-fit: center;
+    
     width: 250px;
     height: 250px;
     border: 3px solid black;
@@ -28,40 +27,40 @@ section.packages-main {
     border-radius: 5px;
     box-shadow: 2px 2px 2px rgba(25,25,25,.50);
     border: solid 1px #EBEBEB;
-
+    
 } 
-/* .button {
-     height: 30px;
-     font-size: 20px; 
-    background-color: white;
-    box-shadow: 2px 2px 2px rgba(25,25,25,.50);
-    border-radius: 5px;
-    align-items: baseline;
-    padding-top:  
- }*/
+
+.packagescontainer {
+    margin-left: 20px;
+    padding-top: 20px;
+
+}
+
+
+.button {
+    margin-top: 20px;   
+ }
 
 .button:hover {
      background-color: red;
      cursor: pointer;
  }
 
+ /* size and spacing of ambulance */
 img.vroom {
-
-    /* object-fit: center; */
     width: 250px;
-    /* height: 250px; */
-    float: left;
-    padding-right: 50px;
+    padding-left: 200px;
+    align-content: right;
 }
-
+/* animation for ambluance */
 div#vroom {
     position: fixed;
     top:40px;
     left:0;
     width: 40px;
     height: 40px;
-    background: img(./images/TransparentAmbulanceLogo.png) 0 0 no-repeat;
-
+    background-image: url("../images/TransparentAmbulanceLogo.png") 0 0 no-repeat;
+   
 }
 
 
