@@ -10,38 +10,40 @@ for (let i = 0; i < packagesString.length; i += 1) { //for loop duh
 
     // here we go with the DOM
     domString += ` 
-<section id="packages-main"> 
+<section class="packages-main"> 
 
-<div><img src="${packages[i].img}"></div> 
+<div><img class="datPic" src="${packages[i].img}"></div> 
 
 <article class="packagesContainer">
 
-<div class="tier">${currentpackages.name}</div>
-<ul>
-<li class="ultimate">${packages[i].services[0].name}</li>
-<li class="deluxe">${packages[i].services[1].name}</li>
-<li class="basic">${packages[i].services[2].name}</li>
-</ul>
-<select>
-`
+    <div class="tier">${currentpackages.name}</div>
+    <ul>
+    <li class="ultimate">${packages[i].services[0].name}</li>
+    <li class="deluxe">${packages[i].services[1].name}</li>
+    <li class="basic">${packages[i].services[2].name}</li>
+    </ul>   
+    <select>
+    `
 
-    for (let key in packages[i].price) {
+        for (let key in packages[i].price) {
 
-        // using Sub key and referencing the prices
-        domString += `
-    <option>${key}-${packages[i].price[key]}</option> `
+            // using Sub key and referencing the prices
+            domString += `
+        <option>${key}-${packages[i].price[key]}</option> `
 
-    }
-    // domString is so that Chrome isn't ignoring my closing select tag
-    domString += ` 
-    </select>
-
+        }
+        // domString is so that Chrome isn't ignoring my closing select tag
+        domString += ` 
+        </select>
+        <br>
+        <button type="button" onclick="clicker()" class="button">Purchase Now</button>
+        
 </article>
-
-<button type="button" onclick="clicker()" class="button">Purchase Now</button>
-
+    <div><img class="vroom" src="${packages[i].vroom}"></div>
 </section>
+
 `
+
 
     packagesElement.innerHTML += domString
 
@@ -57,3 +59,15 @@ function clicker() {
     setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
 }
 
+// vroom function?
+var vroom = function($vroom,speed){
+    vroomWidth = $vroom.width();
+    
+    $vroom.animate({
+        "left": "50%"
+    }, speed);
+};
+
+$(function(){
+    vroom($("#vroom"), 5000);
+});

@@ -1,8 +1,68 @@
+/* .packages-main {
+    display: flex;
 
+} */
+body {
+    background-color: red
+}
+.header{
+    font-size: 40px;
+}
 
+.packages-main {
+    display: flex;
+}
+.datPic {
+    object-fit: center;
+    width: 250px;
+    height: 250px;
+    border: 3px solid black;
+    margin-right: 20px;
+}
+section.packages-main {
 
+    clear: left;
+    padding: 10px;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(25,25,25,.50);
+    border: solid 1px #EBEBEB;
 
+} 
+/* .button {
+     height: 30px;
+     font-size: 20px; 
+    background-color: white;
+    box-shadow: 2px 2px 2px rgba(25,25,25,.50);
+    border-radius: 5px;
+    align-items: baseline;
+    padding-top:  
+ }*/
 
+.button:hover {
+     background-color: red;
+     cursor: pointer;
+ }
+
+img.vroom {
+
+    /* object-fit: center; */
+    width: 250px;
+    /* height: 250px; */
+    float: left;
+    padding-right: 50px;
+}
+
+div#vroom {
+    position: fixed;
+    top:40px;
+    left:0;
+    width: 40px;
+    height: 40px;
+    background: img(./images/TransparentAmbulanceLogo.png) 0 0 no-repeat;
+
+}
 
 
 /* The snackbar - position it at the bottom and in the middle of the screen */
