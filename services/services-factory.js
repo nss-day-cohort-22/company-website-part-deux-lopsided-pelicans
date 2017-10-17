@@ -148,17 +148,17 @@ const juryDuty = {
 //ultimate services array
 const ultimateServices = [];
 
-ultimateServices.push(witnessEmergency, arrestKidnapping, lastResort);
+ultimateServices.push(witnessEmergency, arrest, lastResort, kidnapping, tranq, death);
 
 //deluxe services array
 const deluxeServices = [];
 
-deluxeServices.push(eyewitness, callToLocation, newsStory);
+deluxeServices.push(eyewitness, callToLocation, newsStory, doctor, mom, mistress, fired);
 
 //basic services array
 const basicServices = [];
 
-basicServices.push(phoneCall, texts, socialMedia, missedCall);
+basicServices.push(phoneCall, texts, socialMedia, missedCall,doctorNote, policeReport, juryDuty);
 
 //PACKAGE SUBSCRIPTION OBJECTS
 //Ultimate subscription
