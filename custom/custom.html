@@ -11,8 +11,23 @@
             
         </section>
 
-        <script src=custom-controller.js></script>
+        <div id="list"></div>
+
+        <input type="button" id="previous" onclick="previousPage()" value="previous" />
+        <input type="button" id="1" onclick="changePage(1)" value="1" />
+        <input type="button" id="2" onclick="changePage(2)" value="2" />
+        <input type="button" id="3" onclick="changePage(3)" value="3" />
+        <input type="button" id="4" onclick="changePage(4)" value="4" />
+        <input type="button" id="5" onclick="changePage(5)" value="5" />
+        <input type="button" id="next" onclick="nextPage()" value="next" />
+
+     
+            
+
+        <!-- <script src=custom-controller.js></script> -->
         <script src=custom-factory.js></script>
+        <script src=paginate.js></script>
+
 
         <div id='toaster'>Service Added to Your "Real" Shopping Cart</div>
     </body>
