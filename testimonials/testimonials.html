@@ -16,26 +16,27 @@
 <section class="wrap">
     <section class ="form-container">
       <section class ="form-heading">
-        <h2>We'd love to hear about your experience.</h2>
+        <h2>Tell us about your own experience</h2>
       </section>
       <section class="form">
-            <form class ="submission-form">
-              <span class="form-text">Full Name:</span><br>
-              <input type="text" name="fullname"><br>
-              <span class="form-text">Email:</span><br>
-              <input type="email" name="email"><br>
+            <form name="submission-form"class ="submission-form">
+              <!-- <span class="form-text">Full Name:</span><br> -->
+              <input class="inputbox" type="text" name="fullname" placeholder="Full Name:"required><br>
+              <!-- <span class="form-text">Email:</span><br> -->
+              <input class="inputbox" type="email" name="email" placeholder="Email"required><br>
               <span class="form-text">Tell Us About it:</span><br>
-              <input type="email" name="description"><br>
-              <input type="submit" value="Submit your story!">
+              <input class="inputbox" type="text" name="description"required><br>
+              <input class="submitButton" type="submit" value="Submit your story!" onclick="checkForBlank()">
             </form>
       </section>
     </section>
+    
  <section>
    
          
   <script src="/js/testimonials-factory.js"></script>
   <script src="/js/testimonials-controller.js"></script>
   <script src="/js/testimonials-slideshow.js"></script>
-  <!-- <script src="/js/testimonials-validation.js"></script> -->
+  <script src="/js/testimonials-validate.js"></script>
 </body>
 </html>

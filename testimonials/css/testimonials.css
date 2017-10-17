@@ -44,7 +44,7 @@ hr {
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
-  top: 0;
+  top: 100px;
 }
 
 
@@ -60,14 +60,22 @@ hr {
 }
 
 /* Flexbox Stuff */
+
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .form-container{
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgb(0, 255, 0);
+  border-radius:30px;
+  border: 11px solid rgb(251, 251, 251);
   flex-direction: column;
   background-color: slategrey;
-  width: 50%;
+  width: auto;
 }
 .form-heading {
   padding-bottom: 5px;
@@ -76,9 +84,23 @@ hr {
   width:100%;
   text-align: center;
 }
-
-.wrap {
-  display: flex;
+.submission-form {
+  align-items:center;
+  justify-content:space-around;
+}
+.inputbox {
   align-items: center;
   justify-content: center;
+  width: 200px ;
+  margin: 10px 10px 5px 10px;
+  border-radius:5px;
+
+}
+input:nth-child(5) {
+  height: 70px
+}
+
+.submitButton {
+ width:200px;
+ margin:12px;
 }
