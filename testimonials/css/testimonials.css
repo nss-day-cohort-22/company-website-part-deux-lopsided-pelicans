@@ -48,7 +48,7 @@ hr {
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
-  top: 100px;
+  top: 200px;
 }
 
 
@@ -69,6 +69,8 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top:25px;
+  padding-bottom:30px;
 }
 
 .form-container{
@@ -196,4 +198,15 @@ label + input {
  but to be sure you could use an id or class for that button */
 input + input {
   float: right;
+}
+footer {
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+
+footer ~ a {
+  text-decoration: none;
+  color: white;
 }
