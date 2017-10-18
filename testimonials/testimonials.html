@@ -6,6 +6,7 @@
   <title>Testimonials</title>
   <link rel="stylesheet" href="css/testimonials.css">
   <link rel="stylesheet" href="../../styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
 </head>
 <header>
   <ul id="nav">    
@@ -19,9 +20,8 @@
   </section>
     
     <section class="slideshow-container" alt="testimonial slideshow">
-
+        <!-- Slideshow gets injected here -->
     </section>
-<hr>
 <section class="wrap">
     <section class ="form-container">
       <section class ="form-heading">
@@ -36,19 +36,19 @@
               <label for="description">Tell us your story</label>
               <input class="inputbox" type="text" name="description" required><br>
               <input class="submitButton" type="submit" value="Submit your story!" onclick="clicker()">
-            </form>
-      </section>
-    </section>
-    <div id="snackbar">1</div>
-  </section>
+            </form> <!-- End of form -->
+       </section>  <!-- End of form section-->
+    </section> <!-- End of form container-->
+  </section>  <!-- End of wrap-->
+  <div id="snackbar">Please correct errors and try again!</div>
 <footer>
       <p>Contact Us! Phone: 1-800-555-REAL Email: <a href="mailto:example@email.com">RealEmergencies@gmail.com</a></p>
 </footer> 
    
          
-  <script src="/js/testimonials-factory.js"></script>
-  <script src="/js/testimonials-controller.js"></script>
-  <script src="/js/testimonials-slideshow.js"></script>
-  <script src="/js/testimonials-validate.js"></script>
+  <script src="/js/testimonials-factory.js"></script>  <!--Creates Data for slideshow-->
+  <script src="/js/testimonials-controller.js"></script> <!--Creates Data for slideshow-->
+  <script src="/js/testimonials-slideshow.js"></script> <!--Slideshow logic-->
+  <script src="/js/testimonials-validate.js"></script> <!--Checks if form is filled out-->
 </body>
 </html>

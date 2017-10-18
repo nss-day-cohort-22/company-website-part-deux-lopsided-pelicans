@@ -2,6 +2,9 @@ body {
   background-color: rgba(255,0,0,.8);
   margin: 0;
 }
+h2 {
+  font-family: 'Play', sans-serif;  
+}
 .pageBanner {
   padding-top:10px;
   text-align: center;
@@ -79,11 +82,13 @@ hr {
   width: auto;
 }
 .form-heading {
-  padding-bottom: 5px;
-  background-color: white;
+  padding-bottom: 1px; /* push the form header away from the form slightly */
+  background-color: #f3eeee;
   align-items: stretch;
   width:100%;
   text-align: center;
+  border-top-left-radius:18px;
+  border-top-right-radius:18px;
 }
 .submission-form {
   align-items:center;
@@ -100,7 +105,14 @@ hr {
 
 .submitButton {
  width:200px;
- margin:12px;
+ height:30px;
+ margin-left:15px;
+ margin-top:10px;
+ margin-bottom:10px;
+ background-color:white;
+ border-radius: 5px;
+ font-family: 'Play', sans-serif;
+ 
 }
 
 
@@ -162,16 +174,22 @@ label, input {
 }
 
 label {
-  width: 30%;
+  width: 100%;
   /* positions the label text beside the input */
-  text-align: right;
+  text-align:left;
+  padding-top:10px;
+  color:white;
+  font-family: 'Play', sans-serif;
+  
 }
 
 label + input {
-  width: 30%;
+  width: 100%;
   /* large margin-right to force the next element to the new-line
      and margin-left to create a gutter between the label and input */
   margin: 0 30% 0 4%;
+  height:30px;
+
 }
 
 /* only the submit button is matched by this selector,

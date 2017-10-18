@@ -5,9 +5,8 @@ function clicker() {
     let checkDescrip = document.forms["submission-form"]["description"].value;
 
     if (checkName == "" || checkMail == "" || checkDescrip =="") {
-        return false;
-    }else {
         clickershow();
+        return false;
     }
 }
 function clickershow() {
