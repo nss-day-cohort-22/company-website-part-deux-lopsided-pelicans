@@ -2,9 +2,12 @@ body {
   background-color: rgba(255,0,0,.8);
   margin: 0;
 }
-.page-header {
-    color: white;
-    text-align: center;
+h2 {
+  font-family: 'Play', sans-serif;  
+}
+.pageBanner {
+  padding-top:10px;
+  text-align: center;
 }
 hr {
   width: 70%;
@@ -20,6 +23,7 @@ hr {
   max-width: 1000px;
   position: relative;
   margin: auto;
+  height:300px;
 }
 
 .mySlides {
@@ -44,12 +48,12 @@ hr {
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
-  top: 0;
+  top: 100px;
 }
 
 
 /* Fading animation */
-.fade {
+/* .fade {
   animation-name: fade;
   animation-duration: 1.5s;
 }
@@ -57,28 +61,139 @@ hr {
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
-}
+} */
 
 /* Flexbox Stuff */
-.form-container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgb(0, 255, 0);
-  flex-direction: column;
-  background-color: slategrey;
-  width: 50%;
-}
-.form-heading {
-  padding-bottom: 5px;
-  background-color: white;
-  align-items: stretch;
-  width:100%;
-  text-align: center;
-}
 
 .wrap {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.form-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius:30px;
+  border: 11px solid rgb(251, 251, 251);
+  flex-direction: column;
+  background-color: slategrey;
+  width: auto;
+}
+.form-heading {
+  padding-bottom: 1px; /* push the form header away from the form slightly */
+  background-color: #f3eeee;
+  align-items: stretch;
+  width:100%;
+  text-align: center;
+  border-top-left-radius:18px;
+  border-top-right-radius:18px;
+}
+.submission-form {
+  align-items:center;
+  justify-content:space-around;
+}
+.inputbox {
+  align-items: center;
+  justify-content: center;
+  width: 200px ;
+  margin: 10px 10px 5px 10px;
+  border-radius:5px;
+
+}
+
+.submitButton {
+ width:200px;
+ height:30px;
+ margin-left:15px;
+ margin-top:10px;
+ margin-bottom:10px;
+ background-color:white;
+ border-radius: 5px;
+ font-family: 'Play', sans-serif;
+ 
+}
+
+
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+
+/* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+label, input {
+  /* in order to define widths */
+  display: inline-block;
+}
+
+label {
+  width: 100%;
+  /* positions the label text beside the input */
+  text-align:left;
+  padding-top:10px;
+  color:white;
+  font-family: 'Play', sans-serif;
+  
+}
+
+label + input {
+  width: 100%;
+  /* large margin-right to force the next element to the new-line
+     and margin-left to create a gutter between the label and input */
+  margin: 0 30% 0 4%;
+  height:30px;
+
+}
+
+/* only the submit button is matched by this selector,
+ but to be sure you could use an id or class for that button */
+input + input {
+  float: right;
 }

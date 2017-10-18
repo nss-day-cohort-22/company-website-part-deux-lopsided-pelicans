@@ -5,37 +5,50 @@
   <meta charset="utf-8">
   <title>Testimonials</title>
   <link rel="stylesheet" href="css/testimonials.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
 </head>
+<header>
+  <ul id="nav">    
+  <!-- navbar here -->
+  </ul>            
+</header>
 
 <body>
-    <h1 class="page-header">Testimonials</h1>
+  <section class="pageBanner">
+      <img src="https://fontmeme.com/permalink/171017/4cfbd8b132baab2825cb9949dc172d6f.png" alt="alex-murphy-solid-font" border="0">
+  </section>
+    
     <section class="slideshow-container" alt="testimonial slideshow">
-
+        <!-- Slideshow gets injected here -->
     </section>
-<hr>
 <section class="wrap">
     <section class ="form-container">
       <section class ="form-heading">
-        <h2>We'd love to hear about your experience.</h2>
+        <h2>Tell us about your experience</h2>
       </section>
       <section class="form">
-            <form class ="submission-form">
-              <span class="form-text">Full Name:</span><br>
-              <input type="text" name="fullname"><br>
-              <span class="form-text">Email:</span><br>
-              <input type="email" name="email"><br>
-              <span class="form-text">Tell Us About it:</span><br>
-              <input type="email" name="description"><br>
-              <input type="submit" value="Submit your story!">
-            </form>
-      </section>
-    </section>
- <section>
+            <form name="submission-form"class ="submission-form">
+              <label for="fullname">Full Name</label>
+              <input class="inputbox" type="text" name="fullname" required><br>
+              <label for="email">Email</label>
+              <input class="inputbox" type="email" name="email" required><br>
+              <label for="description">Tell us your story</label>
+              <input class="inputbox" type="text" name="description" required><br>
+              <input class="submitButton" type="submit" value="Submit your story!" onclick="clicker()">
+            </form> <!-- End of form -->
+       </section>  <!-- End of form section-->
+    </section> <!-- End of form container-->
+  </section>  <!-- End of wrap-->
+  <div id="snackbar">Please correct errors and try again!</div>
+<footer>
+      <p>Contact Us! Phone: 1-800-555-REAL Email: <a href="mailto:example@email.com">RealEmergencies@gmail.com</a></p>
+</footer> 
    
          
-  <script src="/js/testimonials-factory.js"></script>
-  <script src="/js/testimonials-controller.js"></script>
-  <script src="/js/testimonials-slideshow.js"></script>
-  <!-- <script src="/js/testimonials-validation.js"></script> -->
+  <script src="/js/testimonials-factory.js"></script>  <!--Creates Data for slideshow-->
+  <script src="/js/testimonials-controller.js"></script> <!--Creates Data for slideshow-->
+  <script src="/js/testimonials-slideshow.js"></script> <!--Slideshow logic-->
+  <script src="/js/testimonials-validate.js"></script> <!--Checks if form is filled out-->
 </body>
 </html>
