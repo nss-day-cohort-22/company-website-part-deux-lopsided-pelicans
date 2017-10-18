@@ -1,6 +1,11 @@
 body {
   background-color: rgba(255,0,0,.8);
   margin: 0;
+  /* Helps push the footer to the bottom of the page     */
+   min-height:100%;
+   position:relative;
+   padding-bottom:10px;
+   font-family: 'Play', sans-serif;
 }
 h2 {
   font-family: 'Play', sans-serif;  
@@ -8,6 +13,9 @@ h2 {
 .pageBanner {
   padding-top:10px;
   text-align: center;
+}
+.pageBanner > img {
+  width:71%;
 }
 hr {
   width: 70%;
@@ -48,7 +56,7 @@ hr {
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
-  top: 200px;
+  top: 259px;
 }
 
 
