@@ -1,89 +1,45 @@
 <html>
-
+        
     <head>
+        <link href='../styles.css' rel='stylesheet'>
         <link href='custom.css' rel='stylesheet'>
     </head>
 
     <body>
+        
+        <header id='headerCustom'>
+            <ul id="nav">    
+            <!-- navbar here -->
+            </ul>            
+        </header>
+    
+        
         <h1 class=title>Build Your Own</h1>
 
-        <section>
-            <div id='ultimate' class='groupContainer'>
-                <h2>Ultimate</h2>
-                <button class='indivContainer'>
-                    <h3>Fully Staged Fake Emergency Scene</h3>
-                    <ul>
-                        <li>[Description]</li>
-                        <li>[Price]</li>
-                    </ul>
-                </button>
-                <button class='indivContainer'>
-                    <h3>Fake Arrest/Kidnapping</h3>
-                    <ul>
-                        <li>[Description]</li>
-                        <li>[Price]</li>
-                    </ul>
-                </button>
-                <button class='indivContainer'>
-                    <h3>"Last Resort" Capsule</h3>
-                    <ul>
-                        <li>[Description]</li>
-                        <li>[Price]</li>
-                    </ul>
-                </button>
-            </div>
-            <div id='deluxe' class='groupContainer'>
-                <h2>Deluxe</h2>
-                <button class='indivContainer'>
-                    <h3>Approached by Actor</h3>
-                    <ul>
-                        <li>[Description]</li>
-                        <li>[Price]</li>
-                    </ul>
-                </button>
-                <button class='indivContainer'>
-                    <h3>Call to your location</h3>
-                    <ul>
-                        <li>[Description]</li>
-                        <li>[Price]</li>
-                    </ul>
-                </button>
-                <button class='indivContainer'>
-                    <h3><i>"Real"</i> News Story</h3>
-                    <ul>
-                        <li>[Description]</li>
-                        <li>[Price]</li>
-                    </ul>
-                </button>
-            </div>
-            <div id='basic' class='groupContainer'>
-                <h2>Basic</h2>
-                <button class='indivContainer'>
-                    <h3>Phone calls</h3>
-                    <ul>
-                        <li>[Description]</li>
-                        <li>[Price]</li>
-                    </ul>
-                </button>
-                <button class='indivContainer'>
-                    <h3>Text messages</h3>
-                    <ul>
-                        <li>[Description]</li>
-                        <li>[Price]</li>
-                    </ul>
-                </button>
-                <button class='indivContainer'>
-                    <h3>Social media mentions</h3>
-                    <ul>
-                        <li>[Description]</li>
-                        <li>[Price]</li>
-                    </ul>
-                </button>
-            </div>
-        </section>
+        <section id="list"></section>
 
-        <script src=custom-controller.js></script>
+        <div id="pageBar">
+            <input type="button" id="previous" class="pageButton" onclick="previousPage()" value="<" />
+            <input type="button" id="first" class="pageButton" onclick="changePage(1)" value="1" />
+            <input type="button" id="second" class="pageButton" onclick="changePage(2)" value="2" />
+            <input type="button" id="third" class="pageButton" onclick="changePage(3)" value="3" />
+            <input type="button" id="fourth" class="pageButton" onclick="changePage(4)" value="4" />
+            <input type="button" id="fifth" class="pageButton" onclick="changePage(5)" value="5" />
+            <input type="button" id="next" class="pageButton" onclick="nextPage()" value=">" />
+        </div>
+     
+            
+
+        <script src=../homeFactory.js></script>
+        <script src=../homeController.js></script>
         <script src=custom-factory.js></script>
+        <script src=custom-controller.js></script>
+
+
+        <div id='toaster'>Service Added to Your "Real" Shopping Cart</div>
+        <footer id='footerCustom'>
+            <p>Contact Us! Phone: 1-800-555-REAL Email: <a href="mailto:example@email.com">RealEmergencies@gmail.com</a></p>
+        </footer>   
     </body>
 
 </html>

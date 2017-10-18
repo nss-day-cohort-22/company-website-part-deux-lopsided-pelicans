@@ -1,7 +1,150 @@
+
+#headerCustom  {
+
+    background:
+rgba(255, 0, 0, 0.8);
+}
+a > img {
+    border-radius: 20px;
+}
+
+#nav {
+    margin: 0;
+    padding: 0;
+    height: 23%;
+}
+
+/***PAGE TITLE***/
 .title {
     text-align: center;
 }
-
-.groupContainer {
-    
+/**SERVICES**/
+.serviceButton  {
+    border: 1px solid black;
+    border-radius: 25px;
+    cursor: pointer;
 }
+.serviceTier, 
+.serviceName {
+    margin-left: 2%;
+}
+.price  {
+    font-size: 2em;
+    font-style: italic;
+}
+
+body  {
+/* Helps push the footer to the bottom of the page     */
+    min-height:100%;
+    position:relative;
+}
+
+#description  {
+    display: block;
+    margin-right: 1%;
+    border: none;
+}
+
+/* PAGEBAR */
+#pageBar  {
+    text-align: center;
+    padding-bottom:60px;
+}
+/* PAGE BUTTONS */
+.pageButton {
+	box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background-color:#f24537;
+	border-radius:6px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:lighter;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+.pageButton:hover {
+	background-color:#c62d1f;
+}
+.pageButton:active {
+	position:relative;
+    /* moves the button down slightly when clicked */
+    top:8px;
+}
+/* prevents the next and previous buttons from being seen when disabled from the js file */
+.pageButton:disabled {
+    cursor: none;
+}
+#next:disabled, #previous:disabled {
+    display: none;
+}
+#first:disabled, #second:disabled, #third:disabled, #fourth:disabled, #fifth:disabled  {
+    font-weight: bolder;
+    background-color:#6e1f1a;
+    box-shadow: 0;
+}
+
+/* FOOTER CUSTOM (added this id just for my own, we can reconcile tomorrow...the absolute position, bottom, width, and height keep it pinned down */
+#footerCustom{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:50px;
+    border-top: .5px, solid, black;
+    background: linear-gradient(
+        rgba(255, 0, 0, 0.8), 
+        rgba(255, 0, 0, 0.6)
+      );
+}
+
+/******************** TOASTER *********************************************************************/
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#toaster {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#toaster.show {
+    visibility: visible; /* Show the snackbar */
+
+/* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
