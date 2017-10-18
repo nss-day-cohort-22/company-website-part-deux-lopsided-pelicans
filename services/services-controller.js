@@ -37,8 +37,8 @@ for (let i = 0; i < packagesString.length; i += 1) { //for loop duh
     domString += ` 
         </select>
         <br>
-        <button type="button" onclick="clicker()" class="button">Purchase Now</button>
-        
+        <button type="button" onclick="clicker(); document.getElementById('sound1').play();" class="button">Purchase Now</button>
+        <audio id="sound1" src="peel-out.mp3" preload="auto"></audio>
 </article>
     <div><img class="ambo" src="${packages[i].vroom}"></div>
 
@@ -47,6 +47,9 @@ for (let i = 0; i < packagesString.length; i += 1) { //for loop duh
 `
     packagesElement.innerHTML += domString
 }
+
+// tire SFX onclick
+
 
 // vroom function?
 
