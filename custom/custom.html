@@ -1,12 +1,13 @@
 <html>
         
     <head>
+        <link href='../styles.css' rel='stylesheet'>
         <link href='custom.css' rel='stylesheet'>
     </head>
 
     <body>
         
-        <header>
+        <header id='headerCustom'>
             <ul id="nav">    
             <!-- navbar here -->
             </ul>            
@@ -15,11 +16,7 @@
         
         <h1 class=title>Build Your Own</h1>
 
-        <section id='mainSection'>
-            
-        </section>
-
-        <div id="list"></div>
+        <section id="list"></section>
 
         <div id="pageBar">
             <input type="button" id="previous" class="pageButton" onclick="previousPage()" value="<" />
@@ -33,12 +30,16 @@
      
             
 
-        <!-- <script src=custom-controller.js></script> -->
+        <script src=../homeFactory.js></script>
+        <script src=../homeController.js></script>
         <script src=custom-factory.js></script>
         <script src=custom-controller.js></script>
 
 
         <div id='toaster'>Service Added to Your "Real" Shopping Cart</div>
+        <footer id='footerCustom'>
+            <p>Contact Us! Phone: 1-800-555-REAL Email: <a href="mailto:example@email.com">RealEmergencies@gmail.com</a></p>
+        </footer>   
     </body>
 
 </html>

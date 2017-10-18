@@ -28,24 +28,24 @@ for (let i = 0; i < storedPackages.length; i++) {
         let currentService = currentPackage.services[j];
         
         
-
+        //store the html text to be pushed into the DOM  in a variable which will be used in the inner HTML later
         listPushed =
             `<div onclick='toastIt()' class='serviceButton'>
-                <h3>${currentService.name}</h3>
-                <h4>${currentService.packageTier}</h4>
+                <h3 class='serviceName'>${currentService.name}</h3>
+                <h4 class='serviceTier'>${currentService.packageTier}</h4>
                 <ul>
-                    <li>${currentService.price}</li>
-                    <li>${currentService.description}</li>
+                    <li class='price'>${currentService.price}</li>
+                    <li id='description'>${currentService.description}</li>
                 </ul>
             </div>
             `
-            
+            //pushes the above text into the array 'list'
             list.push(listPushed);
         }
     }
 
 }
-    console.log(list);
+
 
 numberOfPages = getNumberOfPages();
 

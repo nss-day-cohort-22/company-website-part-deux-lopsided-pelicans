@@ -1,3 +1,19 @@
+
+#headerCustom  {
+
+    background:
+rgba(255, 0, 0, 0.8);
+}
+a > img {
+    border-radius: 20px;
+}
+
+#nav {
+    margin: 0;
+    padding: 0;
+    height: 23%;
+}
+
 /***PAGE TITLE***/
 .title {
     text-align: center;
@@ -8,10 +24,31 @@
     border-radius: 25px;
     cursor: pointer;
 }
+.serviceTier, 
+.serviceName {
+    margin-left: 2%;
+}
+.price  {
+    font-size: 2em;
+    font-style: italic;
+}
+
+body  {
+/* Helps push the footer to the bottom of the page     */
+    min-height:100%;
+    position:relative;
+}
+
+#description  {
+    display: block;
+    margin-right: 1%;
+    border: none;
+}
 
 /* PAGEBAR */
 #pageBar  {
     text-align: center;
+    padding-bottom:60px;
 }
 /* PAGE BUTTONS */
 .pageButton {
@@ -50,6 +87,18 @@
     box-shadow: 0;
 }
 
+/* FOOTER CUSTOM (added this id just for my own, we can reconcile tomorrow...the absolute position, bottom, width, and height keep it pinned down */
+#footerCustom{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:50px;
+    border-top: .5px, solid, black;
+    background: linear-gradient(
+        rgba(255, 0, 0, 0.8), 
+        rgba(255, 0, 0, 0.6)
+      );
+}
 
 /******************** TOASTER *********************************************************************/
 /* The snackbar - position it at the bottom and in the middle of the screen */
@@ -98,8 +147,4 @@ However, delay the fade out process for 2.5 seconds */
     from {bottom: 30px; opacity: 1;}
     to {bottom: 0; opacity: 0;}
 }
-
-
-
-/* UNIVERSAL CSS (DELETE AFTER) */
 
